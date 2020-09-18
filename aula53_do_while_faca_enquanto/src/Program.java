@@ -11,7 +11,7 @@ public class Program {
 		char resp;
 		do 
 		{
-		System.out.print("Digite a temperatura em Celcius para converter em Fahrenheit: ");
+		System.out.print("Digite a temperatura em Celsius para converter em Fahrenheit: ");
 		double C = sc.nextDouble();
 		double F = 9*C/5+32;
 		System.out.printf("Equivalente em Fahrenheit: %.1f%n", F);
