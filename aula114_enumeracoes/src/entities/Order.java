@@ -20,28 +20,28 @@ public class Order {
 	setStatus(status);
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
 	public int getId() {
 		return id;
 	}
-
-	public void setMoment(Date moment) {
-		this.moment = moment;
-	}
 	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public Date getMoment() {
 		return moment;
 	}
 	
-	public void setStatus(OrderStatus status) {
-		this.status = status;
+	public void setMoment(Date moment) {
+		this.moment = moment;
 	}
 	
 	public OrderStatus getOrderStatus() {
 		return status;
+	}
+	
+	public void setStatus(OrderStatus status) {
+		this.status = status;
 	}
 	
 	@Override

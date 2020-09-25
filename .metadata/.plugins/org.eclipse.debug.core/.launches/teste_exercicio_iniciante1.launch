@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-        <listEntry value="/aula43_como_utilizar_o_DEBUG_no_eclipse/src/teste_exercicio_iniciante1.java"/>
+        <listEntry value="/aula043_como_utilizar_o_DEBUG_no_eclipse/src/teste_exercicio_iniciante1.java"/>
     </listAttribute>
     <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
         <listEntry value="1"/>
@@ -9,5 +9,5 @@
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="teste_exercicio_iniciante1"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value=""/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="aula43_como_utilizar_o_DEBUG_no_eclipse"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="aula043_como_utilizar_o_DEBUG_no_eclipse"/>
 </launchConfiguration>

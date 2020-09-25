@@ -60,15 +60,15 @@ public class Worker {
 	}
 
 	public List<HourContract> getContracts() {
-		return contracts;
+		return this.contracts;
 	}
 
 	public void addContract(HourContract contract) {
-		contracts.add(contract);
+		this.contracts.add(contract);
 	}
 
 	public void removeContract(HourContract contract) {
-		contracts.remove(contract);
+		this.contracts.remove(contract);
 	}
 
 	public double income(int year, int month) {
