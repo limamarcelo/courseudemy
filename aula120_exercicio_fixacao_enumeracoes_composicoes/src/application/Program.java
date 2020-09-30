@@ -28,40 +28,32 @@ public class Program {
 		System.out.print("Birth Date (DD/MM/YYYY): ");
 		Date birthDate = sdf.parse(sc.next());
 
+		Client client = new Client(name, email, birthDate);
+		
 		System.out.println("Enter order data: ");
-		Date moment = new Date();
 		System.out.print("Status: ");
-		sc.nextLine();
-		String status = sc.nextLine();
+		OrderStatus status = OrderStatus.valueOf(sc.next());
 
-		Order order = new Order((moment), OrderStatus.valueOf(status), new Client(name, email, birthDate));
-
+		Order order = new Order(new Date(), status, client);
+		 
+		
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 		for (int i = 0; i < n; i++) {
 			System.out.println("Enter #" + (i + 1) + " item data:");
 			System.out.print("Product name: ");
 			sc.nextLine();
-			name = sc.nextLine();
+			String productName = sc.nextLine();
 			System.out.print("Product price: ");
-			double price = sc.nextDouble();
+			double productPrice = sc.nextDouble();
 			System.out.print("Quantity: ");
 			int quantity = sc.nextInt();
-			OrderItem items = new OrderItem(quantity, price, new Product(name, price));
-			order.addOrderItem(items);
-			System.out.println();
-
+			Product product = new Product(productName, productPrice);
+			OrderItem it = new OrderItem(quantity, productPrice, product);
+			order.addItem(it);
 		}
-
+		System.out.println();
 		System.out.println(order);
-		System.out.println("Order Items: ");
-		for (int i = 0; i < order.getOrderItem().size(); i++) {
-			OrderItem product = order.getOrderItem().get(i);
-			System.out.printf("%s, %.2f, Quantity: %d, Subtotal: $%.2f%n", product.getProduct().getName(), product.getProduct().getPrice(), product.getQuantity(), product.subTotal());
-		}
-		
-		System.out.print("Total price: $");
-		System.out.println(order.total());
 		
 		sc.close();
 	}

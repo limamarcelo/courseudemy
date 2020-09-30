@@ -12,9 +12,9 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;
 	private Client client;
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
-	private List<OrderItem> items = new ArrayList<>();
+	private List<OrderItem> items = new ArrayList<OrderItem>();
 
 	public Order() {
 
@@ -23,7 +23,6 @@ public class Order {
 	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
-		this.items = new ArrayList<>();
 		this.client = client;
 	}
 
@@ -43,34 +42,41 @@ public class Order {
 		this.status = status;
 	}
 
-	public List<OrderItem> getOrderItem() {
-		return this.items;
+	public void addItem(OrderItem item) {
+		this.items.add(item);
 	}
 
-	public void addOrderItem(OrderItem items) {
-		this.items.add(items);
-	}
-
-	public void removeOrderItem(OrderItem items) {
-		this.items.remove(items);
+	public void removeItem(OrderItem item) {
+		this.items.remove(item);
 	}
 
 	public double total() {
-		double sum = 0;
-		OrderItem order = null;
-		for (int i = 0; i < items.size(); i++) {
-			order = items.get(i);
-			sum += order.subTotal();
+		double sum = 0.0;
+		for (OrderItem it : items) {
+			sum += it.subTotal();
 		}
 		return sum;
 	}
 
 	@Override
+	/*
+	 * public String toString() { return "ORDER SUMMARY:\n" + "Order moment: " +
+	 * sdf.format(this.moment) + "\nOrder status: " + this.status;
+	 */
 	public String toString() {
-		return "ORDER SUMMARY:\n"
-				+ "Order moment: "
-				+ sdf.format(this.moment)
-				+ "\nOrder status: "
-				+ this.status;
+		StringBuilder sb = new StringBuilder();
+		sb.append("Order moment: ");
+		sb.append(sdf.format(moment) + "\n");
+		sb.append("Order status: ");
+		sb.append(status + "\n");
+		sb.append("Client: ");
+		sb.append(client + "\n");
+		sb.append("Order items:\n");
+		for (OrderItem item : items) {
+			sb.append(item + "\n");
+		}
+		sb.append("Total price: $");
+		sb.append(String.format("%.2f", total()));
+		return sb.toString();
 	}
 }
