@@ -103,8 +103,20 @@
 	<section name="JavaSearchPage">
 		<item key="CASE_SENSITIVE" value="false"/>
 		<item key="INCLUDE_MASK" value="11"/>
-		<item key="HISTORY_SIZE" value="9"/>
+		<item key="HISTORY_SIZE" value="10"/>
 		<section name="HISTORY0">
+			<item key="searchFor" value="0"/>
+			<item key="scope" value="0"/>
+			<item key="pattern" value="override"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="11"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY1">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="Price :"/>
@@ -116,7 +128,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY1">
+		<section name="HISTORY2">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="price :"/>
@@ -128,7 +140,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY2">
+		<section name="HISTORY3">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="toString"/>
@@ -140,7 +152,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY4">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="celcius"/>
@@ -152,7 +164,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY4">
+		<section name="HISTORY5">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="*price*"/>
@@ -164,7 +176,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY5">
+		<section name="HISTORY6">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="Price"/>
@@ -176,7 +188,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY6">
+		<section name="HISTORY7">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="price"/>
@@ -188,7 +200,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY7">
+		<section name="HISTORY8">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="Product"/>
@@ -200,7 +212,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY8">
+		<section name="HISTORY9">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="computer"/>
@@ -216,6 +228,13 @@
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
 		<item key="ShowStatusLine" value="true"/>
 		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="391"/>
+			<item key="DIALOG_Y_ORIGIN" value="39"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
 	</section>
 	<section name="DialogBounds_SuperInterfaceSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="85"/>
