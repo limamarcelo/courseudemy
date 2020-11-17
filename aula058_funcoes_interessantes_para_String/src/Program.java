@@ -6,7 +6,7 @@ public class Program {
 		
 		String s01 = original.toLowerCase();
 		String s02 = original.toUpperCase();
-		String s03 = original.trim();
+		String s03 = original.trim().toUpperCase();
 		String s04 = original.substring(2);
 		String s05 = original.substring(2, 9);
 		String s06 = original.replace('a', 'x');

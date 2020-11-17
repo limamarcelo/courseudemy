@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class Program {
 		Double price;
 		Date manufactureDate;
 		Double customsFee;
-		ArrayList<Product> list = new ArrayList<>();
+		List<Product> list = new ArrayList<>();
 
 		System.out.print("Enter the number of products: ");
 		int n = sc.nextInt();
@@ -30,14 +31,14 @@ public class Program {
 		for (int i = 0; i < n; i++) {
 			System.out.println("Product #" + (i + 1) + " data:");
 			System.out.print("Common, used or imported (c/u/i)? ");
-			char ch = sc.next().charAt(0);
+			char type = sc.next().charAt(0);
 
-			while (!(ch == 'c' || ch == 'u' || ch == 'i')) {
+			while (!(type == 'c' || type == 'u' || type == 'i')) {
 				System.out.println("Please try again");
 				System.out.print("Common, used or imported (c/u/i)? ");
-				ch = sc.next().charAt(0);
+				type = sc.next().charAt(0);
 			}
-			if (ch == 'c') {
+			if (type == 'c') {
 				sc.nextLine();
 				System.out.print("Name: ");
 				name = sc.nextLine();
@@ -45,7 +46,7 @@ public class Program {
 				price = sc.nextDouble();
 				list.add(new Product(name, price));
 			} else {
-				if (ch == 'u') {
+				if (type == 'u') {
 					sc.nextLine();
 					System.out.print("Name: ");
 					name = sc.nextLine();
