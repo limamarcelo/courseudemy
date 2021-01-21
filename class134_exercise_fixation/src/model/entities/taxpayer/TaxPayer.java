@@ -1,14 +1,14 @@
-package entities.person;
+package model.entities.taxpayer;
 
-public abstract class Person {
+public abstract class TaxPayer {
 
 	private String name;
 	protected Double annualIncome;
 
-	public Person() {
+	public TaxPayer() {
 	}
 
-	public Person(String name, Double annualIncome) {
+	public TaxPayer(String name, Double annualIncome) {
 		this.name = name;
 		this.annualIncome = annualIncome;
 	}

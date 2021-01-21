@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.person.Person;
-import entities.person.legal.LegalPerson;
-import entities.person.physical.PhysicalPerson;
+import model.entities.taxpayer.TaxPayer;
+import model.entities.taxpayer.company.Company;
+import model.entities.taxpayer.individual.Individual;
 
 public class Program {
 
@@ -15,7 +15,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
-		List<Person> list = new ArrayList<>();
+		List<TaxPayer> list = new ArrayList<TaxPayer>();
 
 		System.out.print("Enter the number of tax payers: ");
 		int n = Integer.parseInt(sc.next());
@@ -25,26 +25,32 @@ public class Program {
 			char ch = sc.next().charAt(0);
 			System.out.print("Name: ");
 			String name = sc.next();
-			System.out.print("Anual income: ");
+			System.out.print("Annual income: ");
 			Double annualIncome = Double.parseDouble(sc.next());
 			if (ch == 'i') {
 				System.out.print("Health expenditures: ");
-				Double healthSpending = Double.parseDouble(sc.next());
-				list.add(new PhysicalPerson(name, annualIncome, healthSpending));
+				Double healthExpenditures = Double.parseDouble(sc.next());
+				list.add(new Individual(name, annualIncome, healthExpenditures));
 			} else {
 				System.out.print("Number of employees: ");
-				int employeesNumber = Integer.parseInt(sc.next());
-				list.add(new LegalPerson(name, annualIncome, employeesNumber));
+				int numberOfEmployees = Integer.parseInt(sc.next());
+				list.add(new Company(name, annualIncome, numberOfEmployees));
 			}
 		}
-		System.out.println("TAXES PAID:");
-		Double totalTaxes = 0.00;
-		for (Person person : list) {
-			System.out.println(person.getName() + ": $ " + String.format("%.2f", person.tax()));
-			totalTaxes += person.tax();
-		}
+
 		System.out.println();
-		System.out.println("TOTAL TAXES: $ " + String.format("%.2f", totalTaxes));
+		System.out.println("TAXES PAID:");
+		for (TaxPayer tp : list) {
+			System.out.println(tp.getName() + ": $ " + String.format("%.2f", tp.tax()));
+		}
+
+		double sum = 0.00;
+		for (TaxPayer tp : list) {
+			sum += tp.tax();
+		}
+
+		System.out.println();
+		System.out.println("TOTAL TAXES: $ " + String.format("%.2f", sum));
 		sc.close();
 	}
 }
